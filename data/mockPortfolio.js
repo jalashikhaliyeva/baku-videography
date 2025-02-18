@@ -1,0 +1,102 @@
+// mockData.js
+const mockPortfolio = [
+    {
+      id: 1,
+      image: "/images/portfolio/portfolio.png", // Update the path to your image location
+      slug: "sample-project-1",
+      title: "Sample Project 1",
+      tag: "Design",
+      short_desc: "A brief description for Sample Project 1.",
+    },
+    {
+      id: 2,
+      image: "/images/portfolio/portfolio.png",
+      slug: "sample-project-2",
+      title: "Sample Project 2",
+      tag: "Development",
+      short_desc: "A brief description for Sample Project 2.",
+    },
+    {
+      id: 3,
+      image: "/images/portfolio/portfolio.png",
+      slug: "sample-project-3",
+      title: "Sample Project 3",
+      tag: "Marketing",
+      short_desc: "A brief description for Sample Project 3.",
+    },
+    {
+      id: 4,
+      image: "/images/portfolio/portfolio.png",
+      slug: "sample-project-4",
+      title: "Sample Project 4",
+      tag: "Photography",
+      short_desc: "A brief description for Sample Project 4.",
+    },
+    {
+      id: 4,
+      image: "/images/portfolio/portfolio.png",
+      slug: "sample-project-4",
+      title: "Sample Project 4",
+      tag: "Photography",
+      short_desc: "A brief description for Sample Project 4.",
+    },
+    {
+      id: 4,
+      image: "/images/portfolio/portfolio.png",
+      slug: "sample-project-4",
+      title: "Sample Project 4",
+      tag: "Photography",
+      short_desc: "A brief description for Sample Project 4.",
+    },
+    {
+      id: 5,
+      image: "/images/portfolio/portfolio.png",
+      slug: "sample-project-4",
+      title: "Sample Project 4",
+      tag: "Photography",
+      short_desc: "A brief description for Sample Project 4.",
+    },
+    {
+      id: 6,
+      image: "/images/portfolio/portfolio.png",
+      slug: "sample-project-4",
+      title: "Sample Project 4",
+      tag: "Photography",
+      short_desc: "A brief description for Sample Project 4.",
+    },
+    {
+      id: 7,
+      image: "/images/portfolio/portfolio.png",
+      slug: "sample-project-4",
+      title: "Sample Project 4",
+      tag: "Photography",
+      short_desc: "A brief description for Sample Project 4.",
+    },
+    {
+      id: 8,
+      image: "/images/portfolio/portfolio.png",
+      slug: "sample-project-4",
+      title: "Sample Project 4",
+      tag: "Photography",
+      short_desc: "A brief description for Sample Project 4.",
+    },
+    {
+      id: 9,
+      image: "/images/portfolio/portfolio.png",
+      slug: "sample-project-4",
+      title: "Sample Project 4",
+      tag: "Photography",
+      short_desc: "A brief description for Sample Project 4.",
+    },
+    {
+      id: 10,
+      image: "/images/portfolio/portfolio.png",
+      slug: "sample-project-4",
+      title: "Sample Project 4",
+      tag: "Photography",
+      short_desc: "A brief description for Sample Project 4.",
+    },
+  ];
+  
+  export default mockPortfolio;
+  

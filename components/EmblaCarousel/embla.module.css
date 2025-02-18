@@ -1,0 +1,73 @@
+/* embla.module.css */
+.embla {
+  max-width: 126rem;
+  margin: auto;
+  --slide-height: 19rem;
+  --slide-spacing: 0.5rem;
+  --slide-size: 320px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  backface-visibility: hidden;
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  justify-content: center;
+  margin-left: calc(0.5rem * -1);
+  justify-content: flex-start; /* Default alignment */
+}
+
+.embla__containerCenter {
+  justify-content: center; /* Center alignment when fewer slides */
+  margin-left: 0; /* Remove negative margin to prevent offset */
+}
+
+.embla__slide {
+  flex: 0 0 180px;
+  min-width: 0;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+  background-color: var(--background-color); /* Use variable */
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.boxWhite {
+  background-color: #f5f5f7; /* White background for /about page */
+}
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffcc00;
+  color: #333;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 16px;
+  color: var(--buttonTextSecondaryDefault);
+}
+
+.textBadge {
+  font-size: 12px;
+  color: #333;
+}

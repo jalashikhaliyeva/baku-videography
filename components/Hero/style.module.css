@@ -1,0 +1,111 @@
+@keyframes up-down {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-14px);
+        /* Adjust the movement distance as needed */
+    }
+}
+
+@keyframes down-up {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(14px);
+        /* Adjust the movement distance as needed */
+    }
+}
+
+.animateupdown {
+    animation: up-down 3s ease-in-out infinite;
+}
+
+.animatedownup {
+    animation: down-up 3s ease-in-out infinite;
+}
+
+
+/* Default image size */
+.responsivePhoto {
+    width: 400px;
+}
+
+/* Optional: label common style */
+.heroLabel {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--lightGreen, #CDEAC0);
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+
+    /* Adjust overall container padding if needed */
+    .heroContainer {
+        padding-top: 40px;
+    }
+
+    /* Center the text container */
+    .heroTextContainer {
+        text-align: center;
+    }
+
+    /* Adjust the image size and center it */
+    .responsivePhoto {
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    /* Hide the background image on mobile */
+    .bgHeroImagee {
+        display: none !important;
+    }
+
+    /* Override absolute positioning for labels */
+    .heroLabel {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        transform: none !important;
+        margin: 1rem auto;
+    }
+}
+
+/* Existing breakpoints */
+@media (min-width: 320px) and (max-width: 350px) {
+    .responsivePhoto {
+        width: 250px;
+    }
+
+    .bgHeroImagee {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .responsivePhoto {
+        width: 250px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1221px) {
+    .responsivePhoto {
+        width: 300px;
+    }
+}
+
+@media (min-width: 1223px) and (max-width: 1380px) {
+    .responsivePhoto {
+        width: 300px;
+    }
+}
