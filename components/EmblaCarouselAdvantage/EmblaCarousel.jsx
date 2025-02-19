@@ -65,16 +65,8 @@ const Slider = ({ data, type }) => {
   }, [emblaApi]);
 
   const handleCardClick = (slug) => {
-    let basePath = "";
-    if (type === "blog") {
-      basePath = "/blogs";
-    } else if (type === "project") {
-      basePath = "/projects";
-    } else {
-      console.warn(`Unknown type "${type}" passed to Slider component.`);
-      return;
-    }
-    router.push(`${basePath}/${slug}`);
+
+    router.push(`portfolio/${slug}`);
   };
 
   return (

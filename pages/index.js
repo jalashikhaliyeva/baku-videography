@@ -20,7 +20,7 @@ export default function Home() {
       <Partners />
       <Services />
       <Portfolio />
-      <Projects />
+      <Projects id="projects" />
       <Blog />
       <Contact />
       <Footer />

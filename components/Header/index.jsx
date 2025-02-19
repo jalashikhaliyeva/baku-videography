@@ -7,9 +7,9 @@ import { montserrat } from "../../lib/fonts";
 
 const navLinks = [
   "Ana səhifə",
-  "Portfolio",
+  // "Portfolio",
   "Xidmətlər",
-  // "İşlərimiz",
+  "İşlərimiz",
   "Portfolio",
   "Blog",
 ];
@@ -42,12 +42,27 @@ function Header() {
 
   // Function to handle navigation clicks
   const handleNavClick = (item) => {
+    if (item === "İşlərimiz") {
+      // If you're on the homepage, scroll to the Projects section
+      if (router.pathname === "/") {
+        const element = document.getElementById("projects");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        // If not on the homepage, navigate to the homepage with a hash
+        router.push("/#projects");
+      }
+      setMenuOpen(false);
+      return;
+    }
+  
+    // For other navigation items, use the existing mapping logic
     const route = routeMapping[item] || "/";
     router.push(route);
-    // Close the mobile menu when a link is clicked
     setMenuOpen(false);
   };
-
+  
   return (
     <>
       {/* Fixed header wrapper with dynamic box shadow */}

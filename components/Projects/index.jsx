@@ -6,7 +6,7 @@ import VideosSlide from "../VideosSlide/EmblaCarousel";
 import mockVideoSlide from "../../data/mockVideoSlide";
 import IframeVideo from "../IframeVideo";
 
-function Projects() {
+function Projects({id}) {
   // Set the first video as the default selected video
   const [selectedVideo, setSelectedVideo] = useState(mockVideoSlide[0]);
 
@@ -22,7 +22,7 @@ function Projects() {
   );
 
   return (
-    <div className="border-t border-t-borderColor pb-60">
+    <div id={id}  className="border-t border-t-borderColor pb-60">
       <Container>
         <div className="flex flex-row gap-9 items-center pt-60 pb-8">
           <Title>İşlərimiz</Title>
