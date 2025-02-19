@@ -14,7 +14,7 @@ function Hero() {
             <h1
               className={`${spaceGrotesk.className} text-title text-6xl leading-64 font-bold`}
             >
-             John Doe
+              John Doe
             </h1>
             <p
               className={`${spaceGrotesk.className} text-subTitle text-xl font-normal`}
@@ -39,8 +39,17 @@ function Hero() {
             </PrimaryButton>
           </div>
 
-          <div className="relative w-full md:w-[45%] aspect-[5/6]">
-     
+          <div className="block md:hidden w-full">
+            <Image
+              src="/images/hero/photograph.jpg"
+              alt="Photography"
+              width={200}
+              height={600}
+              className="max-w-full w-full  mx-auto rounded-3xl mt-8 h-[400px] object-cover"
+            />
+          </div>
+
+          <div className="hidden md:block relative w-full md:w-[45%] aspect-[5/6]">
             <Image
               src="/images/hero/hero-bg.png"
               alt="hero background image"
@@ -60,10 +69,14 @@ function Hero() {
               </div>
             </div>
 
-            <div className={`absolute left-4 top-[500px] py-3 px-6 bg-lightGreen rounded-2xl ${styles.animateupdown}`}>
+            <div
+              className={`absolute left-4 top-[500px] py-3 px-6 bg-lightGreen rounded-2xl ${styles.animateupdown}`}
+            >
               Mobiloqrafika
             </div>
-            <div className={`absolute right-4 top-[100px] py-3 px-6 bg-lightGreen rounded-2xl ${styles.animatedownup}`}>
+            <div
+              className={`absolute right-4 top-[100px] py-3 px-6 bg-lightGreen rounded-2xl ${styles.animatedownup}`}
+            >
               Videoqrafika
             </div>
           </div>

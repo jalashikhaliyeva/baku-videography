@@ -3,6 +3,7 @@ import { montserrat } from "../../lib/fonts";
 
 function ShowAllButton({
   children,
+  onClick,
   icon,
   bgColor = "bg-white",
   textColor = "text-solid",
@@ -13,6 +14,7 @@ function ShowAllButton({
 }) {
   return (
     <button
+    onClick={onClick}
       className={`${montserrat.className} flex items-center justify-center w-auto py-2 px-3 text-sm md:py-3 md:px-4 md:text-base 
       rounded-xl ${borderColor} font-bold leading-6 flex items-center gap-2 
       transition-all duration-300 ease-in-out transform hover:scale-105 group border

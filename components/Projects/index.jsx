@@ -22,7 +22,7 @@ function Projects() {
   );
 
   return (
-    <div className="border-t border-t-borderColor">
+    <div className="border-t border-t-borderColor pb-60">
       <Container>
         <div className="flex flex-row gap-9 items-center pt-60 pb-8">
           <Title>İşlərimiz</Title>

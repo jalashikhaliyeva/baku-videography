@@ -5,8 +5,10 @@ import mockPortfolio from "../../data/mockPortfolio";
 import Title from "../Title";
 import SubTitle from "../SubTitle";
 import ShowAllButton from "../ShowAllButton";
+import { useRouter } from "next/router";
 
 function Portfolio() {
+    const router = useRouter();
   return (
     <div className="border-t border-t-borderColor">
       <Container>
@@ -20,7 +22,7 @@ function Portfolio() {
 
         <Slider data={mockPortfolio} type="project" />
         <div className="flex justify-center items-center pb-60">
-          <ShowAllButton>Hamısına bax</ShowAllButton>
+          <ShowAllButton onClick={() => router.push("/portfolio")}>Hamısına bax</ShowAllButton>
         </div>
       </Container>
     </div>

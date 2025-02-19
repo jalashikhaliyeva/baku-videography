@@ -1,9 +1,10 @@
 import React from "react";
 import { montserrat } from "../../lib/fonts";
 
-function NavigationButton({ children, icon }) {
+function NavigationButton({ children, icon  , onClick}) {
   return (
     <button
+    onClick={onClick}
       className={`${montserrat.className} 
         py-2 px-3 text-sm md:py-3 md:px-4 md:text-base 
         rounded-full border border-borderColor text-solid font-bold leading-6 

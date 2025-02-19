@@ -5,8 +5,10 @@ import Container from "../Container";
 import BlogCard from "../BlogCard";
 import { mockBlogs } from "../../data/mockBlogs";
 import ShowAllButton from "../ShowAllButton";
+import { useRouter } from "next/router";
 
 function Blog() {
+    const router = useRouter();
   return (
     <div className="border-t border-t-borderColor">
       <Container>
@@ -24,7 +26,7 @@ function Blog() {
           ))}
         </div>
         <div className="flex justify-center items-center pb-60">
-          <ShowAllButton>Hamısına bax</ShowAllButton>
+          <ShowAllButton onClick={() => router.push("/blog")}>Hamısına bax</ShowAllButton>
         </div>
 
 

@@ -94,7 +94,8 @@
 
 /* Dots Navigation */
 .embla__dots {
-  display: flex;
+
+  display: none;
   justify-content: center;
   padding-top: 1rem;
   margin-top: 60px;

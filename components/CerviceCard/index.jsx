@@ -20,7 +20,7 @@ function CerviceCard({ item }) {
   };
 
   const handleClick = (slug) => {
-    router.push(`/services/${slug}`);
+    router.push(`/xidmetler/${slug}`);
   };
 
   const services = Array.isArray(item) ? item : [];

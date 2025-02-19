@@ -1,9 +1,18 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { spaceGrotesk } from "../../lib/fonts";
 
 function BlogCard({ blog }) {
+  const router = useRouter();
+
+  const handleClick = (slug) => {
+    router.push(`/blog/${slug}`);
+  };
+
   return (
     <div
+
+      onClick={() => handleClick(blog.slug)}
       className="relative group bg-no-repeat bg-cover p-8 rounded-2xl shadow-raised h-full cursor-pointer"
       style={{
         background: `linear-gradient(180deg, rgba(25, 26, 35, 0.00) 0.12%, rgba(25, 26, 35, 0.49) 48.59%, #191A23 99.88%), url(${blog.image}) lightgray 50% / cover no-repeat`,
