@@ -77,7 +77,7 @@ function Header() {
             {/* Logo on the left */}
             <div onClick={() => router.push(`/`)} className="cursor-pointer">
               <Image
-                src="/images/logo/logo2.jpg"
+                src="/images/logo/123.png"
                 width={65}
                 height={42}
                 alt="logo"
@@ -172,7 +172,7 @@ function Header() {
           {/* Logo on the left */}
           <div onClick={() => router.push(`/`)} className="cursor-pointer">
             <Image
-              src="/images/logo/logo1.png"
+              src="/images/logo/123.png"
               width={65}
               height={42}
               alt="logo"
