@@ -5,7 +5,7 @@ const mockPortfolio = [
     image: "/images/portfolio/portfolio.png", // Update the path to your image location
     slug: "sample-project-1",
     title: "Sample Project 1",
-    tag: "Design",
+    tag: ["Development", "Marketing"],
     short_desc: "A brief description for Sample Project 1.",
   },
   {

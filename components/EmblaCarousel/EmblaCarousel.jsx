@@ -20,7 +20,10 @@ const EmblaCarousel = ({ slides, options, autoScrollOptions }) => {
 
   const handleSlideClick = (link) => {
     if (link) {
-      window.open(link, "_blank", "noopener,noreferrer");
+      const url = link.startsWith("http")
+        ? link
+        : `https://${link}`;
+      window.open(url, "_blank", "noopener,noreferrer");
     }
   };
 

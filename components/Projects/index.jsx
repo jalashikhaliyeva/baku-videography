@@ -3,26 +3,31 @@ import Container from "../Container";
 import Title from "../Title";
 import SubTitle from "../SubTitle";
 import VideosSlide from "../VideosSlide/EmblaCarousel";
-import mockVideoSlide from "../../data/mockVideoSlide";
 import IframeVideo from "../IframeVideo";
 
-function Projects({id}) {
-  // Set the first video as the default selected video
-  const [selectedVideo, setSelectedVideo] = useState(mockVideoSlide[0]);
+function Projects({ id, data }) {
+  console.log(data, "data");
+  
+  // Ensure data exists before using it
+  if (!data || data.length === 0) {
+    return <div>No videos available.</div>;
+  }
 
-  // This callback will be passed to the slider so that when a slide is clicked,
-  // the selected video is updated.
+  // Set the first video from props as the default selected video
+  const [selectedVideo, setSelectedVideo] = useState(data[0]);
+
+  // This callback will update the selected video
   const handleVideoSelect = (video) => {
     setSelectedVideo(video);
   };
 
   // Filter out the selected video so it doesn't appear in the slider.
-  const sliderData = mockVideoSlide.filter(
-    (video) => video.slug !== selectedVideo.slug
+  const sliderData = data.filter(
+    (video) => video.link !== selectedVideo.link
   );
 
   return (
-    <div id={id}  className="border-t border-t-borderColor pb-60">
+    <div id={id} className="border-t border-t-borderColor pb-60">
       <Container>
         <div className="flex flex-row gap-9 items-center pt-60 pb-8">
           <Title>İşlərimiz</Title>

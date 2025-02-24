@@ -4,6 +4,7 @@ import { montserrat } from "../../lib/fonts";
 function PrimaryButton({
   children,
   icon,
+  onClick, 
   bgColor = "bg-white",
   textColor = "text-solid",
   hoverBgColor = "hover:bg-primaryBtn",
@@ -13,6 +14,7 @@ function PrimaryButton({
 }) {
   return (
     <button
+    onClick={onClick}
       className={`${montserrat.className} self-start w-auto py-2 px-3 text-sm md:py-3 md:px-4 md:text-base 
       rounded-xl ${borderColor} font-bold leading-6 flex items-center gap-2 
       transition-all duration-300 ease-in-out group border

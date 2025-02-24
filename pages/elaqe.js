@@ -11,17 +11,42 @@ import Blog from "@/components/Blog";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-export default function Elaqe() {
+import { getSettings } from "@/services/getSettings";
+import { useRouter } from "next/router";
+export default function Elaqe({ settingsData }) {
+  const router = useRouter();
+  const { locale } = router;
   return (
     <>
       <Head />
-      <Header />
+      <Header data={settingsData.main} />
 
       <div className="pt-60">
         <Contact />
       </div>
 
-      <Footer />
+      <Footer data={settingsData} />
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const lang = context.locale || "az";
+
+  try {
+    const [settingsData] = await Promise.all([getSettings(lang)]);
+
+    return {
+      props: {
+        settingsData,
+      },
+    };
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+    return {
+      props: {
+        settingsData: null,
+      },
+    };
+  }
 }

@@ -2,12 +2,11 @@ import React from "react";
 import Title from "../Title";
 import Container from "../Container";
 import SubTitle from "../SubTitle";
-import mockServices from "../../data/mockServices";
 import CerviceCard from "../CerviceCard";
 import ShowAllButton from "../ShowAllButton";
 import { useRouter } from "next/router";
 
-function Services() {
+function Services({data}) {
   const router = useRouter();
   return (
     <>
@@ -20,7 +19,7 @@ function Services() {
           </SubTitle>
         </div>
 
-        <CerviceCard item={mockServices} />
+        <CerviceCard item={data} />
         <div className="flex justify-center items-center pb-60">
           <ShowAllButton onClick={() => router.push("/xidmetler")}>
             Hamısına bax

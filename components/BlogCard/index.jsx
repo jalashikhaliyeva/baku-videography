@@ -1,6 +1,6 @@
-import React from "react";
-import { useRouter } from "next/router";
-import { spaceGrotesk } from "../../lib/fonts";
+import DOMPurify from 'isomorphic-dompurify';
+import { useRouter } from 'next/router';
+import { spaceGrotesk } from '@/lib/fonts';
 
 function BlogCard({ blog }) {
   const router = useRouter();
@@ -9,9 +9,10 @@ function BlogCard({ blog }) {
     router.push(`/blog/${slug}`);
   };
 
+  const sanitizedHTML = DOMPurify.sanitize(blog.description, { FORBID_ATTR: ['style'] });
+
   return (
     <div
-
       onClick={() => handleClick(blog.slug)}
       className="relative group bg-no-repeat bg-cover p-8 rounded-2xl shadow-raised h-full cursor-pointer"
       style={{
@@ -38,9 +39,12 @@ function BlogCard({ blog }) {
 
       <div className={`${spaceGrotesk.className} flex flex-col text-white pt-20`}>
         <h6 className="text-3xl border-t border-t-white pt-4 transition-colors duration-300 group-hover:text-lightGreen">
-          {blog.title}
+          {blog.title} 
         </h6>
-        <p className="text-base">{blog.description}</p>
+        <div
+          className={`${spaceGrotesk.className} text-base !text-white line-clamp-3`}
+          dangerouslySetInnerHTML={{ __html: sanitizedHTML }}
+        />
       </div>
     </div>
   );

@@ -3,12 +3,10 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { montserrat } from "@/lib/fonts";
 
-
-const PortfolioCard = ({ slide}) => {
+const PortfolioCard = ({ slide }) => {
   const router = useRouter();
 
   const handleCardClick = (slug) => {
-
     router.push(`portfolio/${slug}`);
   };
 
@@ -44,10 +42,24 @@ const PortfolioCard = ({ slide}) => {
           </div>
         </div>
 
-        <div className="absolute bottom-2 left-2 bg-black p-2 px-3 rounded-full">
-          <p className={`${montserrat.className} text-sm text-lightGreen`}>
-            {slide.tag}
-          </p>
+        <div className="absolute bottom-2 left-2 flex gap-2">
+          {Array.isArray(slide.tags) ? (
+            slide.tags.map((tag, i) => (
+              <div key={i} className="bg-black p-2 px-3 rounded-full">
+                <p
+                  className={`${montserrat.className} text-sm text-lightGreen`}
+                >
+                  {tag.title}
+                </p>
+              </div>
+            ))
+          ) : (
+            <div className="bg-black p-2 px-3 rounded-full">
+              <p className={`${montserrat.className} text-sm text-lightGreen`}>
+                {slide?.tags?.title}
+              </p>
+            </div>
+          )}
         </div>
       </div>
 

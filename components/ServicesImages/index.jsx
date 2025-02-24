@@ -5,7 +5,7 @@ import ImageModal from "../ProjectSlider/ImageModal";
 import LoadMoreButton from "../LoadMoreButton";
 
 // Sample image data (adjust IDs and src as needed)
-const imagesData = [
+const img = [
   { id: 1, image: "/images/blog/blog-card.png" },
   { id: 2, image: "/images/hero/photograph.jpg" },
   { id: 3, image: "/images/blog/blog-card.png" },
@@ -28,7 +28,7 @@ const imagesData = [
   { id: 20, image: "/images/blog/blog-card.png" },
 ];
 
-function ServicesImages() {
+function ServicesImages({ data }) {
   // Modal slider state
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalIndex, setModalIndex] = useState(0);
@@ -49,11 +49,11 @@ function ServicesImages() {
 
   // Navigate to previous/next image in the modal
   const modalPrev = () => {
-    setModalIndex((prev) => (prev === 0 ? imagesData.length - 1 : prev - 1));
+    setModalIndex((prev) => (prev === 0 ? data.length - 1 : prev - 1));
   };
 
   const modalNext = () => {
-    setModalIndex((prev) => (prev === imagesData.length - 1 ? 0 : prev + 1));
+    setModalIndex((prev) => (prev === data.length - 1 ? 0 : prev + 1));
   };
 
   // Load more images (10 at a time)
@@ -61,8 +61,8 @@ function ServicesImages() {
     setVisibleCount((prev) => prev + 10);
   };
 
-  // Slice the imagesData array based on visibleCount
-  const visibleImages = imagesData.slice(0, visibleCount);
+  // Slice the data array based on visibleCount
+  const visibleImages = data.slice(0, visibleCount);
 
   return (
     <>
@@ -79,9 +79,9 @@ function ServicesImages() {
               alt="Services Image"
               width={220}
               height={190}
-              // Remove individual rounded class since container already has it
-              className="w-full h-[190px] object-cover transform transition duration-300 group-hover:scale-110"
+              className="w-full h-[190px] object-cover border border-zinc-400 rounded-xl transform transition duration-300 group-hover:scale-110"
             />
+
             {/* Overlay: now it will inherit the container's border radius */}
             <div
               className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 cursor-pointer"
@@ -94,7 +94,7 @@ function ServicesImages() {
       </div>
 
       {/* Render the Load More Button only if there are more images to show */}
-      {visibleCount < imagesData.length && (
+      {visibleCount < data.length && (
         <LoadMoreButton onClick={loadMoreImages} />
       )}
 
@@ -102,7 +102,7 @@ function ServicesImages() {
       <ImageModal
         isOpen={isModalOpen}
         currentIndex={modalIndex}
-        data={imagesData}
+        data={data}
         onClose={closeModal}
         onPrev={modalPrev}
         onNext={modalNext}

@@ -7,7 +7,7 @@ import { mockBlogs } from "../../data/mockBlogs";
 import ShowAllButton from "../ShowAllButton";
 import { useRouter } from "next/router";
 
-function Blog() {
+function Blog({data}) {
     const router = useRouter();
   return (
     <div className="border-t border-t-borderColor">
@@ -21,8 +21,8 @@ function Blog() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pb-60 ">
-          {mockBlogs.map((blog) => (
-            <BlogCard key={blog.id} blog={blog} />
+          {data.map((blog) => (
+            <BlogCard key={blog.slug} blog={blog} />
           ))}
         </div>
         <div className="flex justify-center items-center pb-60">

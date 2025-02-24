@@ -7,7 +7,7 @@ function IframeVideo({ video }) {
     <div className="w-full rounded-2xl overflow-hidden">
       <div
         className="w-full iframe-wrapper"
-        dangerouslySetInnerHTML={{ __html: video.iframe }}
+        dangerouslySetInnerHTML={{ __html: video.link }}
       />
       {/* Global style override */}
       <style jsx global>{`

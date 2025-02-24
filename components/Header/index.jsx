@@ -18,12 +18,12 @@ const navLinks = [
 const routeMapping = {
   "Ana səhifə": "/",
   Portfolio: "/portfolio",
-  "Xidmətlər": "/xidmetler",
-  "İşlərimiz": "/portfolio",
+  Xidmətlər: "/xidmetler",
+  İşlərimiz: "/portfolio",
   Blog: "/blog",
 };
 
-function Header() {
+function Header({ data }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const router = useRouter();
@@ -35,7 +35,7 @@ function Header() {
 
     // Listen for scroll events
     window.addEventListener("scroll", handleScroll);
-    
+
     // Cleanup the event listener on component unmount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -56,13 +56,13 @@ function Header() {
       setMenuOpen(false);
       return;
     }
-  
+
     // For other navigation items, use the existing mapping logic
     const route = routeMapping[item] || "/";
     router.push(route);
     setMenuOpen(false);
   };
-  
+
   return (
     <>
       {/* Fixed header wrapper with dynamic box shadow */}
@@ -77,7 +77,8 @@ function Header() {
             {/* Logo on the left */}
             <div onClick={() => router.push(`/`)} className="cursor-pointer">
               <Image
-                src="/images/logo/123.png"
+                src={data?.image}
+                // src="/images/logo/123.png"
                 width={65}
                 height={42}
                 alt="logo"
@@ -172,7 +173,8 @@ function Header() {
           {/* Logo on the left */}
           <div onClick={() => router.push(`/`)} className="cursor-pointer">
             <Image
-              src="/images/logo/123.png"
+              src={data?.image}
+              // src="/images/logo/123.png"
               width={65}
               height={42}
               alt="logo"

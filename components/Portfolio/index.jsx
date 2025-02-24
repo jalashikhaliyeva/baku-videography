@@ -7,7 +7,7 @@ import SubTitle from "../SubTitle";
 import ShowAllButton from "../ShowAllButton";
 import { useRouter } from "next/router";
 
-function Portfolio() {
+function Portfolio({data}) {
     const router = useRouter();
   return (
     <div className="border-t border-t-borderColor">
@@ -20,7 +20,7 @@ function Portfolio() {
           </SubTitle>
         </div>
 
-        <Slider data={mockPortfolio} type="project" />
+        <Slider data={data} type="project" />
         <div className="flex justify-center items-center pb-60">
           <ShowAllButton onClick={() => router.push("/portfolio")}>Hamısına bax</ShowAllButton>
         </div>
