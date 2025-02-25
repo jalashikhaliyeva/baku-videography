@@ -19,7 +19,6 @@ function ContactForm() {
     if (!lastName.trim()) newErrors.lastName = "Soyad tələb olunur";
     if (!subject.trim()) newErrors.subject = "Mövzu tələb olunur";
     if (!message.trim()) newErrors.message = "Mesaj tələb olunur";
-    
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -45,9 +44,12 @@ function ContactForm() {
       setSubject("");
       setMessage("");
     } catch (error) {
-      toast.error("Form göndərilərkən xəta baş verdi, zəhmət olmasa yenidən cəhd edin.", {
-        toastId: "contact-form-error",
-      });
+      toast.error(
+        "Form göndərilərkən xəta baş verdi, zəhmət olmasa yenidən cəhd edin.",
+        {
+          toastId: "contact-form-error",
+        }
+      );
     }
   };
 
@@ -64,7 +66,7 @@ function ContactForm() {
               htmlFor="firstName"
               className="block text-sm font-normal text-black dark:text-white mb-2"
             >
-               Adınız
+              Adınız
             </label>
             <input
               type="text"

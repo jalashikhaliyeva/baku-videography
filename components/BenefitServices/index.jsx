@@ -17,7 +17,7 @@ function BenefitServices({ data }) {
     "/images/benefit/benefit7.jpg",
     "/images/benefit/benefit8.jpg",
   ];
-  const phoneNumber = data.contact.phone;
+  const phoneNumber = data?.contact?.phone;
   const defaultMessage =
     "Salam, xidmətləriniz haqqında məlumat almaq istəyirəm.";
   const encodedMessage = encodeURIComponent(defaultMessage);
