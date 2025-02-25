@@ -64,12 +64,12 @@ function ContactForm() {
               htmlFor="firstName"
               className="block text-sm font-normal text-black dark:text-white mb-2"
             >
-              First Name
+               Adınız
             </label>
             <input
               type="text"
               id="firstName"
-              placeholder="Your Name"
+              placeholder="Adınızı daxil edin"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               className={`w-full p-3 border rounded-xl shadow-sm transition duration-300 ${
@@ -87,12 +87,12 @@ function ContactForm() {
               htmlFor="lastName"
               className="block text-sm font-normal dark:text-white text-black mb-2"
             >
-              Last Name
+              Soyadınız
             </label>
             <input
               type="text"
               id="lastName"
-              placeholder="Your Last Name"
+              placeholder="Soyadınızı daxil edin"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               className={`w-full p-3 border rounded-xl shadow-sm transition duration-300 ${
@@ -113,12 +113,12 @@ function ContactForm() {
             htmlFor="subject"
             className="block text-sm font-normal dark:text-white text-black mb-2"
           >
-            Subject
+            Mövzu
           </label>
           <input
             type="text"
             id="subject"
-            placeholder="Enter Subject"
+            placeholder="Mövzu daxil edin"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
             className={`w-full p-3 border rounded-xl shadow-sm transition duration-300 ${
@@ -138,12 +138,12 @@ function ContactForm() {
             htmlFor="message"
             className="block text-sm font-normal dark:text-white text-black mb-2"
           >
-            Message
+            Mesaj
           </label>
           <textarea
             id="message"
             rows="8"
-            placeholder="Tell us about your project"
+            placeholder="Mesajınızı daxil edin"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             className={`w-full p-3 border rounded-xl shadow-sm transition duration-300 ${
@@ -163,7 +163,7 @@ function ContactForm() {
             type="submit"
             className="w-full text-center bg-black dark:bg-white text-white dark:text-black px-4 py-3 hover:bg-blackButtonHover transition duration-300 rounded-xl flex items-center justify-center gap-2 text-xl leading-6 font-medium group"
           >
-            Send
+            Göndər
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

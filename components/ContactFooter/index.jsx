@@ -21,7 +21,6 @@ function ContactFooter() {
     if (!lastName.trim()) newErrors.lastName = "Soyad tələb olunur";
     if (!subject.trim()) newErrors.subject = "Mövzu tələb olunur";
     if (!message.trim()) newErrors.message = "Mesaj tələb olunur";
-    
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -46,9 +45,12 @@ function ContactFooter() {
       setSubject("");
       setMessage("");
     } catch (error) {
-      toast.error("Form göndərilərkən xəta baş verdi, zəhmət olmasa yenidən cəhd edin.", {
-        toastId: "contact-footer-error",
-      });
+      toast.error(
+        "Form göndərilərkən xəta baş verdi, zəhmət olmasa yenidən cəhd edin.",
+        {
+          toastId: "contact-footer-error",
+        }
+      );
     }
   };
 
@@ -69,12 +71,12 @@ function ContactFooter() {
               htmlFor="firstName"
               className="block text-sm font-normal text-white mb-2"
             >
-              First Name
+              Adınız
             </label>
             <input
               type="text"
               id="firstName"
-              placeholder="Your Name"
+              placeholder="Adınızı daxil edin"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               className={`w-full p-3 border rounded-xl shadow-sm bg-darkForm text-white transition duration-300 
@@ -94,12 +96,12 @@ function ContactFooter() {
               htmlFor="lastName"
               className="block text-sm font-normal text-white mb-2"
             >
-              Last Name
+              Soyadınız
             </label>
             <input
               type="text"
               id="lastName"
-              placeholder="Your Last Name"
+              placeholder="Soyadınızı daxil edin"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               className={`w-full p-3 border rounded-xl shadow-sm bg-darkForm text-white transition duration-300 
@@ -122,12 +124,12 @@ function ContactFooter() {
             htmlFor="subject"
             className="block text-sm font-normal text-white mb-2"
           >
-            Subject
+            Layihəniz haqqında məlumat
           </label>
           <input
             type="text"
             id="subject"
-            placeholder="Enter Subject"
+            placeholder="Layihə mövzusu"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
             className={`w-full p-3 border rounded-xl shadow-sm bg-darkForm text-white transition duration-300 
@@ -149,12 +151,12 @@ function ContactFooter() {
             htmlFor="message"
             className="block text-sm font-normal text-white mb-2"
           >
-            Message
+            Mesaj
           </label>
           <textarea
             id="message"
             rows="8"
-            placeholder="Tell us about your project"
+            placeholder="Mesajınızı daxil edin"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             className={`w-full p-3 border bg-darkForm text-white rounded-xl shadow-sm transition duration-300 
@@ -177,7 +179,7 @@ function ContactFooter() {
             className="w-full text-center bg-black dark:bg-white text-white dark:text-black px-4 py-3 
                        hover:bg-blackButtonHover transition duration-300 rounded-xl flex items-center justify-center gap-2 text-xl leading-6 font-medium group"
           >
-            Send
+            Göndər
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

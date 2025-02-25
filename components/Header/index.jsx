@@ -24,6 +24,9 @@ const routeMapping = {
 };
 
 function Header({ data }) {
+
+  console.log(data, "data header");
+  
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const router = useRouter();
@@ -76,13 +79,7 @@ function Header({ data }) {
           <div className="flex items-center justify-between gap-8 pt-5 pb-5">
             {/* Logo on the left */}
             <div onClick={() => router.push(`/`)} className="cursor-pointer">
-              <Image
-                src={data?.image}
-                // src="/images/logo/123.png"
-                width={65}
-                height={42}
-                alt="logo"
-              />
+              <Image src={data?.image} width={65} height={42} alt="logo" className="w-10" />
             </div>
 
             {/* Desktop Navigation (>=869px using custom breakpoint) */}

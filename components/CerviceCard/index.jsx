@@ -93,13 +93,13 @@ function CerviceCard({ item }) {
                   More
                 </button>
               </div>
-              <div className="relative flex-shrink-0 w-[104px] h-[104px] lg:w-[190px] lg:h-[190px] overflow-hidden">
+              <div className="relative flex-shrink-0 w-[104px] h-[104px] lg:w-[190px] lg:h-[200px] overflow-hidden">
                 {/* Base Image (always visible) */}
                 <Image
                   src={service.image}
                   alt={`${service.title} Card`}
                   layout="fill"
-                  className="absolute inset-0 rounded-2xl transition-opacity duration-500 object-contain opacity-100"
+                  className="absolute inset-0 rounded-2xl transition-opacity duration-500 object-cover opacity-100"
                 />
                 {/*
                 // Commented out the hovered image component to disable the hover effect

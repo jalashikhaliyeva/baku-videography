@@ -11,7 +11,6 @@ import Blog from "@/components/Blog";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-
 import { useRouter } from "next/router";
 import { getHero } from "@/services/getHero";
 import { getPartners } from "@/services/getPartners";
@@ -32,7 +31,7 @@ export default function Home({
 }) {
   const router = useRouter();
   const { locale } = router;
-  console.log(servicesData, "servicesData");
+  console.log(settingsData, "settingsData");
 
   if (
     !heroData ||
@@ -50,7 +49,6 @@ export default function Home({
   return (
     <>
       <Head>
-        {/* Fallback to default values if homeMeta is not found */}
         <title>{homeMeta ? homeMeta.meta_title : "Default Title"}</title>
         {homeMeta && (
           <>

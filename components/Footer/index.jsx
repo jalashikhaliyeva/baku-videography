@@ -20,10 +20,10 @@ function Footer({ data }) {
   // Define mapping between nav link text and route paths
   const navRoutes = {
     "Ana səhifə": "/",
-    "Portfolio": "/portfolio",
-    "İşlərimiz": "/islerimiz", // fallback route if needed
-    "Xidmətlər": "/xidmetler",
-    "Blog": "/blog",
+    Portfolio: "/portfolio",
+    İşlərimiz: "/islerimiz", // fallback route if needed
+    Xidmətlər: "/xidmetler",
+    Blog: "/blog",
   };
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -76,8 +76,9 @@ function Footer({ data }) {
               src={data.main.image}
               width={65}
               height={42}
-              className="w-32 md:w-[140px] object-contain"
+              className="w-11  object-contain"
               alt="logo"
+              style={{ filter: "brightness(0) invert(1)" }}
             />
           </div>
 
@@ -92,7 +93,7 @@ function Footer({ data }) {
                   onClick={() => handleNavClick(item)}
                 >
                   {item}
-                  <span className="absolute left-0 -bottom-1 block h-0.5 w-0 bg-black transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute left-0 -bottom-1 block h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full" />
                 </li>
               ))}
             </ul>
@@ -115,7 +116,7 @@ function Footer({ data }) {
                   alt={social.link}
                   width={30}
                   height={30}
-                  className="object-contain"
+                  className="object-contain w-10"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
               </div>
