@@ -17,10 +17,16 @@ import { getSingleService } from "@/services/getSingleService";
 import Loading from "@/components/Loading";
 
 const ServiceDetail = ({ serviceData, settingsData }) => {
+  console.log(settingsData, "settingsData");
+
   const router = useRouter();
   const { slug } = router.query; // This retrieves the dynamic slug
   if (!serviceData || !settingsData) {
-    return <><Loading /></>;
+    return (
+      <>
+        <Loading />
+      </>
+    );
   }
 
   // console.log(serviceData, "serviceData");
@@ -45,7 +51,7 @@ const ServiceDetail = ({ serviceData, settingsData }) => {
       <Header data={settingsData.main} />
       <Container>
         <main className="container mx-auto py-10 mt-24">
-          {/* Updated back button with onClick */}
+       
           <div
             onClick={() => router.back()}
             className={`${montserrat.className} cursor-pointer flex flex-row items-center gap-1 font-bold text-base pb-8`}
@@ -57,7 +63,7 @@ const ServiceDetail = ({ serviceData, settingsData }) => {
           <SubTitleSingle>{serviceData.data.description}</SubTitleSingle>
 
           <ServicesImages data={serviceData.data.images} />
-          <BenefitServices />
+          <BenefitServices data={settingsData} />
         </main>
       </Container>
 
