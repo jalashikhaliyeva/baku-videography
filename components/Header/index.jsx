@@ -78,9 +78,9 @@ function Header({ data }) {
           {/* Main Header Bar */}
           <div className="flex items-center justify-between gap-8 pt-5 pb-5">
             {/* Logo on the left */}
-            {/* <div onClick={() => router.push(`/`)} className="cursor-pointer">
+            <div onClick={() => router.push(`/`)} className="cursor-pointer">
               <Image src={data?.image} width={65} height={42} alt="logo" className="w-10" />
-            </div> */}
+            </div>
 
             {/* Desktop Navigation (>=869px using custom breakpoint) */}
             <nav className="hidden custom:block">
