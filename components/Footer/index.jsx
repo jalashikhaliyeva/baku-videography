@@ -134,11 +134,27 @@ function Footer({ data }) {
               Bizimlə əlaqə
             </button>
             <div className="flex flex-col gap-2 text-white text-lg">
-  <p className="underline-hover">Email: {data.contact.email}</p>
-  <p className="underline-hover">Mobil nömrə: {data.contact.phone}</p>
-  <p className="underline-hover">{data.contact.address}</p>
-</div>
-
+              <p
+                className="underline-hover cursor-pointer"
+                onClick={() =>
+                  (window.location.href = `mailto:${data.contact.email}?subject=New%20Project&body=Hello,`)
+                }
+              >
+                Email: {data.contact.email}
+              </p>
+              <p
+                className="underline-hover cursor-pointer"
+                onClick={() =>
+                  window.open(
+                    `https://wa.me/${data.contact.phone}?text=Hello,%20i%20want%20to%20get%20info`,
+                    "_blank"
+                  )
+                }
+              >
+                Mobil nömrə: {data.contact.phone}
+              </p>
+              <p className="underline-hover">{data.contact.address}</p>
+            </div>
           </div>
 
           {/* Right side: ContactFooter */}
