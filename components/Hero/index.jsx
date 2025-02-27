@@ -75,7 +75,7 @@ function Hero({ data }) {
                   alt="Photography"
                   width={400}
                   height={600}
-                  className="max-w-full h-auto rounded-3xl translate-x-4"
+                  className="max-w-full h-[600px] rounded-3xl translate-x-4 "
                 />
               </div>
             </div>
