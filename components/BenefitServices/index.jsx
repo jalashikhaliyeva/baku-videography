@@ -78,8 +78,9 @@ function BenefitServices({ data }) {
               src={data?.main?.image}
               width={65}
               height={42}
-              className="w-32 md:w-[140px] object-contain bg-borderColor p-3 rounded-md"
+              className="w-32 md:w-[80px] object-contain  rounded-md"
               alt="logo"
+              // style={{ filter: "brightness(0) invert(1)" }}
             />
           </div>
         </div>

@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import { montserrat } from "@/lib/fonts";
 
 const PortfolioCard = ({ slide }) => {
+  console.log(slide, "slide");
+
   const router = useRouter();
 
   const handleCardClick = (slug) => {
@@ -64,7 +66,7 @@ const PortfolioCard = ({ slide }) => {
       </div>
 
       <div className="p-4">
-        <h5 className="text-3xl leading-52 text-textSecondaryDefault font-medium pb-2 dark:text-white line-clamp-2">
+        <h5 className="text-3xl leading-10 text-textSecondaryDefault font-medium pb-2 dark:text-white line-clamp-1">
           {slide.title}
         </h5>
       </div>

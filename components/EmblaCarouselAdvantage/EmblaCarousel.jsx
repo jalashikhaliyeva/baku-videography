@@ -132,7 +132,7 @@ const Slider = ({ data, type }) => {
                 </div>
 
                 <div className="p-4">
-                  <h5 className="text-3xl leading-52 text-textSecondaryDefault font-medium pb-2 dark:text-white line-clamp-2">
+                  <h5 className="text-3xl font-medium pb-2 leading-[48px] dark:text-white line-clamp-1 ">
                     {slide.title}
                   </h5>
                 </div>

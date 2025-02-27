@@ -68,7 +68,7 @@ export default function Home({
             : servicesData.data
         }
       />
-      <Portfolio data={portfolioData.data} />
+      <Portfolio data={portfolioData.data.portfolios.data} />
       <Projects id="projects" data={projectsData.data} />
       <Blog
         data={

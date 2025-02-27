@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
     "axios": "^1.7.9",
     "dompurify": "^3.2.4",
     "embla-carousel-auto-scroll": "^8.5.2",

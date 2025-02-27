@@ -103,11 +103,11 @@ const PortfolioDetailed = ({
             activeVideo={selectedVideo}
           />
 
-          <BenefitServices />
+          <BenefitServices data={settingsData} />
           <div className="flex flex-row gap-9 items-center pt-60 pb-6">
             <Title>Digər işlər</Title>
           </div>
-          <Slider data={allPortfolios.data} type="project" />
+          <Slider data={allPortfolios.data.portfolios.data} type="project" />
 
           <div className="flex justify-center items-center pb-5">
             <ShowAllButton onClick={() => router.push("/portfolio")}>

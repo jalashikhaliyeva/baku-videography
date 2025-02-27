@@ -15,8 +15,11 @@ export default {
         subTitle: "#333",
         primaryBtn: "rgba(0, 0, 0, 0.90)",
         lightGreen: "#B9FF66",
+        green500:"#C6DCA5",
         borderColor: "#191A23",
         gray: "#F3F3F3",
+        gray500: "#F5F5F5",
+        gray700: "#939393",
         footerBg: "#292A32",
         solid: "#443F3F",
         white: "#fff",
@@ -47,5 +50,7 @@ export default {
       
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 };
