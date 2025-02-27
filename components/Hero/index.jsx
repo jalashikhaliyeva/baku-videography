@@ -3,10 +3,19 @@ import PrimaryButton from "../PrimaryButton";
 import Container from "../Container";
 import { spaceGrotesk } from "../../lib/fonts";
 import Image from "next/image";
+import DOMPurify from "isomorphic-dompurify";
 import styles from "./style.module.css";
 
 function Hero({ data }) {
+  // Sanitize the HTML content
+  const sanitizedHTML = DOMPurify.sanitize(data.description, {
+    FORBID_ATTR: ["style"],
+  });
 
+  // Convert the sanitized HTML string to plain text by parsing it and then extracting textContent
+  const plainText = new DOMParser()
+    .parseFromString(sanitizedHTML, "text/html")
+    .body.textContent;
 
   return (
     <div className="pt-120">
@@ -21,7 +30,7 @@ function Hero({ data }) {
             <p
               className={`${spaceGrotesk.className} text-subTitle text-xl font-normal`}
             >
-              {data.description}
+              {plainText}
             </p>
             <PrimaryButton
               onClick={() => {
@@ -44,17 +53,15 @@ function Hero({ data }) {
           <div className="block md:hidden w-full">
             <Image
               src={data.image}
-              // src="/images/hero/photograph.jpg"
               alt="Photography"
               width={200}
               height={600}
-              className="max-w-full w-full  mx-auto rounded-3xl mt-8 h-[400px] object-cover"
+              className="max-w-full w-full mx-auto rounded-3xl mt-8 h-[400px] object-cover"
             />
           </div>
 
           <div className="hidden md:block relative w-full md:w-[45%] aspect-[5/6]">
             <Image
-              // src={data.image}
               src="/images/hero/hero-bg.png"
               alt="hero background image"
               fill

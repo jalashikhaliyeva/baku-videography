@@ -133,11 +133,12 @@ function Footer({ data }) {
             <button className="text-lg font-medium bg-lightGreen px-3 py-1 mb-6 rounded-lg self-start">
               Bizimlə əlaqə
             </button>
-            <div className="flex flex-col gap-2 text-white text-sm">
-              <p>Email: {data.contact.email}</p>
-              <p>Mobil nömrə: {data.contact.phone}</p>
-              <p>{data.contact.address}</p>
-            </div>
+            <div className="flex flex-col gap-2 text-white text-lg">
+  <p className="underline-hover">Email: {data.contact.email}</p>
+  <p className="underline-hover">Mobil nömrə: {data.contact.phone}</p>
+  <p className="underline-hover">{data.contact.address}</p>
+</div>
+
           </div>
 
           {/* Right side: ContactFooter */}
