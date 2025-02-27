@@ -87,11 +87,11 @@ const BlogDetailed = ({ blogData, settingsData }) => {
 
           {/* Blog Content */}
           <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[50%] flex flex-col mx-auto pb-8 space-y-6">
-            <h6
+            {/* <h6
               className={`${spaceGrotesk.className} inline-block text-3xl sm:text-4xl md:text-5xl lg:text-6xl rounded-lg px-2 py-3 font-medium leading-tight text-neutralBlack dark:text-white`}
             >
               Global Tradeand Sustainability
-            </h6>
+            </h6> */}
             {/* <p
               className={`${spaceGrotesk.className} text-base sm:text-lg md:text-xl leading-relaxed`}
             >
