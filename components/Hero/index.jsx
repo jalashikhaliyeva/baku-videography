@@ -13,8 +13,7 @@ function Hero({ data }) {
   });
 
   // Convert the sanitized HTML string to plain text by parsing it and then extracting textContent
-  const plainText = new DOMParser()
-    .parseFromString(sanitizedHTML, "text/html")
+  const plainText = new DOMParser().parseFromString(sanitizedHTML, "text/html")
     .body.textContent;
 
   return (

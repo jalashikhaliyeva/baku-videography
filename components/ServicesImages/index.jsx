@@ -4,29 +4,7 @@ import { MdOutlineZoomOutMap } from "react-icons/md";
 import ImageModal from "../ProjectSlider/ImageModal";
 import LoadMoreButton from "../LoadMoreButton";
 
-// Sample image data (adjust IDs and src as needed)
-const img = [
-  { id: 1, image: "/images/blog/blog-card.png" },
-  { id: 2, image: "/images/hero/photograph.jpg" },
-  { id: 3, image: "/images/blog/blog-card.png" },
-  { id: 4, image: "/images/hero/photograph.jpg" },
-  { id: 5, image: "/images/blog/blog-card.png" },
-  { id: 6, image: "/images/blog/blog-card.png" },
-  { id: 7, image: "/images/blog/blog-card.png" },
-  { id: 8, image: "/images/hero/photograph.jpg" },
-  { id: 9, image: "/images/blog/blog-card.png" },
-  { id: 10, image: "/images/blog/blog-card.png" },
-  { id: 11, image: "/images/hero/photograph.jpg" },
-  { id: 12, image: "/images/blog/blog-card.png" },
-  { id: 13, image: "/images/blog/blog-card.png" },
-  { id: 14, image: "/images/hero/photograph.jpg" },
-  { id: 15, image: "/images/blog/blog-card.png" },
-  { id: 16, image: "/images/blog/blog-card.png" },
-  { id: 17, image: "/images/blog/blog-card.png" },
-  { id: 18, image: "/images/blog/blog-card.png" },
-  { id: 19, image: "/images/blog/blog-card.png" },
-  { id: 20, image: "/images/blog/blog-card.png" },
-];
+
 
 function ServicesImages({ data }) {
   // Modal slider state
@@ -79,7 +57,7 @@ function ServicesImages({ data }) {
               alt="Services Image"
               width={220}
               height={190}
-              className="w-full h-[190px] object-cover border border-zinc-400 rounded-xl transform transition duration-300 group-hover:scale-110"
+              className="w-full h-[230px] object-cover border border-zinc-400 rounded-xl transform transition duration-300 group-hover:scale-110"
             />
 
             {/* Overlay: now it will inherit the container's border radius */}

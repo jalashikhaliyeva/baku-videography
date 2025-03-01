@@ -39,7 +39,7 @@ const PortfolioDetailed = ({
     return <><Loading /></>;
   }
 
-  console.log(projectsData, "projectsData");
+  // console.log(projectsData, "projectsData");
 
   console.log(portfolioData, "portfolioData");
 
@@ -102,6 +102,10 @@ const PortfolioDetailed = ({
             onVideoSelect={handleVideoSelect}
             activeVideo={selectedVideo}
           />
+
+
+<ServicesImages data={portfolioData.data.images.filter(image => image.link === null)} />
+
 
           <BenefitServices data={settingsData} />
           <div className="flex flex-row gap-9 items-center pt-60 pb-6">
